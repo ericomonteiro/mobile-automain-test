@@ -18,7 +18,7 @@ https://www.oracle.com/br/java/technologies/downloads/
 </ul>
 
 ##### Create a virtual Device with name `AUTOMAIN_DEVICE` like this:
-<img src="/resource/virtual-device.png">
+<img src="./resource/virtual-device.png">
 
 ```shell
 npm install -g appium@next
@@ -34,4 +34,9 @@ appium driver list
 
 ```shell
 appium driver install uiautomator2
+```
+
+##### To Start Appium Server: !Important stay at root project directory
+```shell
+appium
 ```
