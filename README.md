@@ -2,6 +2,7 @@
 
 <b>Libs:</b>  
 https://appium.io/  
+https://github.com/appium/appium-inspector  
 https://testng.org/doc/index.html  
 https://developer.android.com/studio
 https://nodejs.org/en/download/  
@@ -16,6 +17,19 @@ https://www.oracle.com/br/java/technologies/downloads/
     <li>PATH - %ANDROID_HOME%/platform-tools</li>
     <li>PATH - %ANDROID_HOME%/tools/bin</li>
 </ul>
+
+##### Using Appium Inspector
+
+Capabilities JSON Representation
+> :warning: **Probably you will need to pass absolute path because inspector is running in another path !
+```json
+{
+    "app": "app/ApiDemos-debug.apk",
+    "deviceName": "AUTOMAIN_DEVICE",
+    "appium:automationName": "UiAutomator2",
+    "automationName": "UiAutomator2"
+}
+```
 
 ##### Create a virtual Device with name `AUTOMAIN_DEVICE` like this:
 <img src="./resource/virtual-device.png">
