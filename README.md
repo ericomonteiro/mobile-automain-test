@@ -4,7 +4,7 @@
 https://appium.io/  
 https://github.com/appium/appium-inspector  
 https://testng.org/doc/index.html  
-https://developer.android.com/studio
+https://developer.android.com/studio  
 https://nodejs.org/en/download/  
 https://www.oracle.com/br/java/technologies/downloads/
 
