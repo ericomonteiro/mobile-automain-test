@@ -8,4 +8,5 @@ object AppiumProperties {
     val APP: String = Properties.values["appium.app"]!!
     val DEVICE_NAME: String = Properties.values["appium.device-name"]!!
     val SERVER_LOCAL: String = Properties.values["appium.server-location"]!!
+    val PLATFORM: String = Properties.values["appium.platform"]!!
 }

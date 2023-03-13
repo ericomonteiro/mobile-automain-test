@@ -20,14 +20,16 @@ https://www.oracle.com/br/java/technologies/downloads/
 
 ##### Using Appium Inspector
 
+It's an application similar than web browser inspector, used to find elements inside the app without need the app code  
+<img src="./resource/inspector.png"/>  
 Capabilities JSON Representation
 > :warning: **Probably you will need to pass absolute path because inspector is running in another path !
 ```json
 {
     "app": "app/ApiDemos-debug.apk",
     "deviceName": "AUTOMAIN_DEVICE",
-    "appium:automationName": "UiAutomator2",
-    "automationName": "UiAutomator2"
+    "automationName": "UiAutomator2",
+    "platformName": "android"
 }
 ```
 
