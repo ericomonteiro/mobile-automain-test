@@ -18,12 +18,40 @@ https://www.oracle.com/br/java/technologies/downloads/
     <li>PATH - %ANDROID_HOME%/tools/bin</li>
 </ul>
 
-##### Using Appium Inspector
+##### Create a virtual Device with name `AUTOMAIN_DEVICE` like this:
+<img src="./resource/virtual-device.png">
 
+Install Appium
+```shell
+npm install -g appium@next
+```
+
+Install Appium Doctor
+```shell
+npm install -g appium-doctor
+```
+
+Check configuration
+```shell
+appium-doctor
+```
+
+List drivers
+```shell
+appium driver list
+```
+
+To use android this driver is necessary
+```shell
+appium driver install uiautomator2
+```
+
+##### Using Appium Inspector
+Installation link https://github.com/appium/appium-inspector/releases  
 It's an application similar than web browser inspector, used to find elements inside the app without need the app code  
 <img src="./resource/inspector.png"/>  
 Capabilities JSON Representation
-> :warning: **Probably you will need to pass absolute path because inspector is running in another path !
+> :warning: **Probably you will need to pass absolute path because inspector is running in another path!
 ```json
 {
     "app": "app/ApiDemos-debug.apk",
@@ -33,26 +61,14 @@ Capabilities JSON Representation
 }
 ```
 
-##### Create a virtual Device with name `AUTOMAIN_DEVICE` like this:
-<img src="./resource/virtual-device.png">
-
-```shell
-npm install -g appium@next
-```
-
-```shell
-npm install -g appium-doctor
-```
-
-```shell
-appium driver list
-```
-
-```shell
-appium driver install uiautomator2
-```
-
-##### To Start Appium Server: !Important stay at root project directory
+##### :warning: To Start Appium Server: Important stay at root project directory
 ```shell
 appium
 ```
+
+#####  Sequence loading properties application
+1. [application.properties](./src/main/resources/application.properties)
+2. [application-profile.properties](./src/main/resources/application-local.properties)
+3. The same properties can be load as environment variables
+
+> :warning: To use this option you must set env variable `appium-profile` and use `,` as delimiter like this example `appium-profile=local,embedded`

@@ -10,7 +10,7 @@ object Properties {
     init {
         loadPropertiesFromFile("application.properties")
 
-        System.getenv(SysProperties.APPIUM_TEST_PROFILE)
+        System.getenv(SysProperties.APPIUM_PROFILE)
             ?.split(",")
             ?.forEach { profile ->
                 loadPropertiesFromFile("application-$profile.properties")
