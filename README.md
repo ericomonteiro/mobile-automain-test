@@ -66,9 +66,18 @@ Capabilities JSON Representation
 appium
 ```
 
-#####  Sequence loading properties application
+##### Sequence loading properties application
 1. [application.properties](./src/main/resources/application.properties)
 2. [application-profile.properties](./src/main/resources/application-local.properties)
 3. The same properties can be load as environment variables
 
 > :warning: To use this option you must set env variable `appium-profile` and use `,` as delimiter like this example `appium-profile=local,embedded`
+
+##### Build docker-image
+```shell
+docker build -t image-name:version .
+```
+Example
+```shell
+docker build -t ericoh/mobile-automain-test .
+```

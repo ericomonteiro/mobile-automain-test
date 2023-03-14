@@ -9,4 +9,5 @@ object AppiumProperties {
     val DEVICE_NAME: String = Properties.values["appium.device-name"]!!
     val SERVER_LOCAL: String = Properties.values["appium.server-location"]!!
     val PLATFORM: String = Properties.values["appium.platform"]!!
+    val EMBEDDED: Boolean = Properties.values["appium.embedded"]!! == "true"
 }

@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  mobile-automain-test:
+    image: ericoh/mobile-automain-test:latest
+#    volumes:
+#      - zookeeper-data:/var/lib/zookeeper/data:Z
+#      - zookeeper-log:/var/lib/zookeeper/log:Z
+    environment:
+      appium.profile: docker
