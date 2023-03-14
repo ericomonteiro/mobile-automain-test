@@ -16,12 +16,15 @@ class AppiumBasics {
         val preference = Screen(Screens.PREFERENCES, AppiumProperties.PLATFORM)
         val preferenceDependencies = Screen(Screens.PREFERENCE_DEPENDENCIES, AppiumProperties.PLATFORM)
 
-        AppiumServer.service.start()
+//        AppiumServer.service.start()
         val driver = AppiumDriver.start()
 
         driver.findElement(home.elements["preference"]).click()
         driver.findElement(preference.elements["preference-dependencies"]).click()
         driver.findElement(preferenceDependencies.elements["checkbox"]).click()
+        driver.findElement(preferenceDependencies.elements["wifi-settings"]).click()
+        driver.findElement(preferenceDependencies.elements["wifi-edit"]).sendKeys("erico-wifi")
+        driver.findElement(preferenceDependencies.elements["confirm-button"]).click()
 
         driver.quit()
         AppiumServer.service.stop()
