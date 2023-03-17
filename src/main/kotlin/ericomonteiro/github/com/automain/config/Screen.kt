@@ -1,5 +1,6 @@
 package ericomonteiro.github.com.automain.config
 
+import ericomonteiro.github.com.automain.config.appium.AppiumProperties
 import ericomonteiro.github.com.automain.consts.ByKinds
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
@@ -9,6 +10,8 @@ class Screen(
     private val screen: String,
     private val platform: String
 ) {
+
+    constructor(screen: String): this(screen, AppiumProperties.PLATFORM)
 
     private val properties = Properties()
     val elements = mutableMapOf<String, By>()
